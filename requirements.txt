@@ -1,0 +1,8 @@
+Flask
+gunicorn
+numpy
+scikit-learn
+pdfplumber
+pytesseract
+Pillow
+pdf2image
