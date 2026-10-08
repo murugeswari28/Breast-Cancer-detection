@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BreastCare AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        BreastCare AI
+    </div>
+
+    <div class="nav-links">
+
+        <a href="{{ url_for('home') }}"
+           class="active">
+            Home
+        </a>
+
+        <a href="{{ url_for('upload') }}">
+            Upload Report
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            MACHINE LEARNING PROJECT
+        </div>
+
+        <h1>
+            Breast Cancer
+            <span>Detection</span>
+        </h1>
+
+        <p class="subtitle">
+            Using Machine Learning & Python
+        </p>
+
+        <p class="description">
+
+            BreastCare AI is a machine learning based
+            system designed to analyze medical report
+            measurements and assist in breast cancer
+            classification.
+
+        </p>
+
+
+        <a href="{{ url_for('upload') }}"
+           class="primary-button">
+
+            Upload Medical Report
+
+        </a>
+
+    </div>
+
+
+    <!-- =================================================
+         RIGHT SIDE CARD
+    ================================================== -->
+
+    <div class="hero-card">
+
+        <div class="card-icon">
+            🩺
+        </div>
+
+        <h2>
+            AI-Powered Analysis
+        </h2>
+
+        <p>
+            Upload a medical report and the system
+            extracts important measurements such as
+            radius, perimeter and area.
+        </p>
+
+
+        <div class="feature-list">
+
+            <div class="feature">
+                <span>✓</span>
+                Report Analysis
+            </div>
+
+            <div class="feature">
+                <span>✓</span>
+                Feature Extraction
+            </div>
+
+            <div class="feature">
+                <span>✓</span>
+                Machine Learning Prediction
+            </div>
+
+            <div class="feature">
+                <span>✓</span>
+                Result Visualization
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-section">
+
+    <h2>
+        How BreastCare AI Works
+    </h2>
+
+    <p class="section-description">
+        A simple four-step process for analyzing
+        the uploaded medical report.
+    </p>
+
+
+    <div class="steps">
+
+
+        <!-- STEP 1 -->
+
+        <div class="step-card">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <h3>
+                Upload Report
+            </h3>
+
+            <p>
+                Upload your medical report in
+                PDF or image format.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 2 -->
+
+        <div class="step-card">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <h3>
+                Extract Values
+            </h3>
+
+            <p>
+                The system extracts radius,
+                perimeter and area values.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 3 -->
+
+        <div class="step-card">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <h3>
+                ML Prediction
+            </h3>
+
+            <p>
+                A Random Forest machine learning
+                model analyzes the extracted values.
+            </p>
+
+        </div>
+
+
+        <!-- STEP 4 -->
+
+        <div class="step-card">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <h3>
+                View Result
+            </h3>
+
+            <p>
+                The predicted classification and
+                extracted measurements are displayed.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features-section">
+
+    <div class="feature-content">
+
+        <h2>
+            Intelligent Report Analysis
+        </h2>
+
+        <p>
+            BreastCare AI combines Python,
+            Flask and Machine Learning to
+            process medical report information.
+        </p>
+
+
+        <ul>
+
+            <li>
+                Medical report upload
+            </li>
+
+            <li>
+                Automatic value extraction
+            </li>
+
+            <li>
+                Radius, perimeter and area analysis
+            </li>
+
+            <li>
+                Random Forest classification
+            </li>
+
+            <li>
+                Easy-to-understand result
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="technology-card">
+
+        <h3>
+            Technologies Used
+        </h3>
+
+        <div class="technology">
+
+            <span>Python</span>
+            <span>Flask</span>
+            <span>Machine Learning</span>
+            <span>HTML</span>
+            <span>CSS</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DISCLAIMER
+===================================================== -->
+
+<section class="disclaimer">
+
+    <h3>
+        Important Note
+    </h3>
+
+    <p>
+        BreastCare AI is an academic machine learning
+        project developed for educational and research
+        purposes. The prediction should not be considered
+        a medical diagnosis. Please consult a qualified
+        healthcare professional for medical decisions.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        © 2026 BreastCare AI |
+        Breast Cancer Detection using Machine Learning
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Report - BreastCare AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="project-title">
+        Breast Cancer Detection
+        <span>using Machine Learning</span>
+    </div>
+
+    <div class="nav-links">
+
+        <a href="{{ url_for('home') }}">
+            Home
+        </a>
+
+        <a href="{{ url_for('upload') }}"
+           class="active">
+            Upload Report
+        </a>
+
+    </div>
+
+</nav>
+
+</nav>
+
+
+<section class="upload-header">
+
+    <div class="badge">
+        MACHINE LEARNING PROJECT
+    </div>
+
+    <h1>Upload Medical Report</h1>
+
+    <p>
+        Upload a PDF or image of your medical report.
+        The system will try to extract the patient details
+        and required measurements automatically.
+    </p>
+
+</section>
+
+
+<section class="upload-section">
+
+    <div class="upload-container">
+
+        <div class="form-card">
+
+            <h2>Medical Report</h2>
+
+            <p class="form-description">
+                Upload your report. If any value cannot be extracted,
+                you can enter or correct it on the next page.
+            </p>
+
+
+            <form action="{{ url_for('analyze') }}"
+                  method="POST"
+                  enctype="multipart/form-data">
+
+                <div class="report-upload">
+
+                    <label for="report"
+                           class="file-upload-box">
+
+                        <div class="upload-icon">
+                            📄
+                        </div>
+
+                        <h3>
+                            Upload Report
+                        </h3>
+
+                        <p>
+                            PDF, JPG, JPEG, PNG
+                        </p>
+
+                        <span class="choose-button">
+                            Choose File
+                        </span>
+
+                        <input
+                            type="file"
+                            id="report"
+                            name="report"
+                            accept=".pdf,.png,.jpg,.jpeg,.bmp,.tiff,.webp"
+                            required
+                            onchange="showFileName(this)">
+
+                    </label>
+
+                    <div id="file-name"
+                         class="selected-file">
+                        No file selected
+                    </div>
+
+                </div>
+
+
+                <button type="submit"
+                        class="analyze-button">
+
+                    Extract Report Details
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                🤖
+            </div>
+
+            <h2>How It Works</h2>
+
+
+            <div class="info-step">
+
+                <span>01</span>
+
+                <div>
+                    <h3>Upload</h3>
+
+                    <p>
+                        Upload your medical report
+                        as PDF or image.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-step">
+
+                <span>02</span>
+
+                <div>
+                    <h3>Extract</h3>
+
+                    <p>
+                        OCR tries to read patient details
+                        and measurements.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-step">
+
+                <span>03</span>
+
+                <div>
+                    <h3>Verify</h3>
+
+                    <p>
+                        Check and correct any missing
+                        extracted values.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-step">
+
+                <span>04</span>
+
+                <div>
+                    <h3>Predict</h3>
+
+                    <p>
+                        Radius, perimeter and area are
+                        given to the ML model.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="disclaimer">
+
+    <h3>
+        Important Note
+    </h3>
+
+    <p>
+        This is an academic machine learning project.
+        The prediction is not a medical diagnosis.
+        Please consult a qualified healthcare professional
+        for medical decisions.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 BreastCare AI |
+        Breast Cancer Detection using Machine Learning
+    </p>
+
+</footer>
+
+
+<script>
+
+function showFileName(input) {
+
+    const fileName =
+        document.getElementById("file-name");
+
+    if (input.files.length > 0) {
+
+        fileName.textContent =
+            "Selected file: " +
+            input.files[0].name;
+
+        fileName.classList.add("file-selected");
+
+    } else {
+
+        fileName.textContent =
+            "No file selected";
+
+        fileName.classList.remove("file-selected");
+    }
+}
+
+</script>
+
+</body>
+
+</html>
